@@ -136,4 +136,4 @@ Level Siswa
 
 ## Penutup
 
-Semoga bermanfaat, dan dapat menambah wawasan kalian.
+Semoga bermanfaat, dan dapat dicolong banyak orang
