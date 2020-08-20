@@ -24,6 +24,7 @@ Route::resource('/dashboard/data-kelas', 'KelasController');
 Route::resource('/dashboard/data-spp', 'SppController');
 Route::resource('/dashboard/data-petugas', 'PetugasController');
 Route::resource('/dashboard/pembayaran', 'PembayaranController');
+Route::resource('/dashboard/tagihan', 'TagihanController');
 Route::resource('/dashboard/histori', 'HistoryController');
 
 Route::get('/dashboard/laporan', 'LaporanController@index');
@@ -32,4 +33,5 @@ Route::get('/dashboard/laporan/create', 'LaporanController@create');
 Route::get('/login/siswa', 'SiswaLoginController@siswaLogin');
 Route::post('/login/siswa/proses', 'SiswaLoginController@login');
 Route::get('/dashboard/siswa/histori', 'SiswaLoginController@index');
+Route::get('/dashboard/siswa/tagihan', 'SiswaLoginController@indexTagihan');
 Route::get('/siswa/logout', 'SiswaLoginController@logout');

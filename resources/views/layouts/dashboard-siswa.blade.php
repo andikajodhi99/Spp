@@ -134,6 +134,7 @@
                             <!-- End User Profile-->
                         </li>                      
                         <!-- User Profile-->
+                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{ url('dashboard/siswa/tagihan') }}" aria-expanded="false"><i class="mdi mdi-note-multiple"></i><span class="hide-menu">Tagihan Pembayaran Siswa</span></a></li>
                         <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{ url('dashboard/siswa/histori') }}" aria-expanded="false"><i class="mdi mdi-note-multiple"></i><span class="hide-menu">Histori Pembayaran Siswa</span></a></li>
 																		              
                     </ul>

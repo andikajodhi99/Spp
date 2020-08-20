@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Pembayaran;
+use App\Tagihan;
 use App\User;
 use App\Siswa;
 use Alert;
@@ -84,6 +85,15 @@ class PembayaranController extends Controller
             'spp_bulan' => $req->spp_bulan,
             'jumlah_bayar' => $req->jumlah_bayar,
          ]);
+
+         /* update tagihan */
+         Tagihan::where([
+            ['status', '=', '0'],
+            ['id_siswa', '=', $id_siswa]
+         ])->update([
+            'status' => 1
+         ]);
+
          
          Alert::success('Berhasil!', 'Pembayaran Berhasil di Tambahkan!');
          
