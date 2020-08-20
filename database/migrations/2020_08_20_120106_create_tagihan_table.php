@@ -20,6 +20,7 @@ class CreateTagihanTable extends Migration
             $table->string('spp_bulan',20);
             $table->integer('jumlah_bayar');
             $table->integer('status');
+            $table->string('keterangan');      
             $table->timestamps();
         });
     }

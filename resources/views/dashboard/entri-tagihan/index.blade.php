@@ -47,7 +47,13 @@
                        <input type="text" class="form-control @error('jumlah_bayar') is-invalid @enderror" name="jumlah_bayar">
                        <span class="text-danger">@error('jumlah_bayar') {{ $message }} @enderror</span>
                     </div>
-                  
+
+                    <div class="form-group">
+                       <label>Keterangan</label>
+                       <input type="text" class="form-control @error('keterangan') is-invalid @enderror" name="keterangan">
+                       <span class="text-danger">@error('keterangan') {{ $message }} @enderror</span>
+                    </div>
+
                    <button type="submit" class="btn btn-success btn-rounded float-right">
                      <i class="mdi mdi-check"></i> Sebarkan
                    </button>

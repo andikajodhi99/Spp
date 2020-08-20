@@ -26,6 +26,7 @@
                                              <ul class="list-group list-group-flush">
                                                 <li class="list-group-item">Kelas {{ $history->siswa->kelas->nama_kelas }}</li>
                                                 <li class="list-group-item">Jumlah Tagihan Rp.{{ $history->jumlah_bayar }}</li>
+                                                <li class="list-group-item">Keterangan : {{ $history->keterangan }}</li>
                                                 <li class="list-group-item">Status Bayar <b  class="text-capitalize text-bold">Belum Bayar</b></li>                                   
                                            </ul>
                                         </span>

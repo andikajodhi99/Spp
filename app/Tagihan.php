@@ -9,7 +9,7 @@ class Tagihan extends Model
     protected $table = 'tagihan';
    
     protected $fillable = [
-         'id_siswa', 'spp_bulan', 'jumlah_bayar', 'status'
+         'id_siswa', 'spp_bulan', 'jumlah_bayar', 'status', 'keterangan'
     ];
    
  /**

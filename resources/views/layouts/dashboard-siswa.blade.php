@@ -191,7 +191,7 @@
             <!-- footer -->
             <!-- ============================================================== -->
             <footer class="footer text-center">
-                Design by Xtreme Admin. Backend by <a href="https://github.com/ravialdo">Ravialdo</a>.
+                
             </footer>
             <!-- ============================================================== -->
             <!-- End footer -->
