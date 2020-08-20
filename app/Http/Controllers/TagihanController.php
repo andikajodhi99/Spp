@@ -60,7 +60,8 @@ class TagihanController extends Controller
          
         $req->validate([
             'spp_bulan' => 'required',
-            'jumlah_bayar' => 'required|numeric'
+            'jumlah_bayar' => 'required|numeric',
+            'keterangan' => 'required'
          ], $message);
 
 
@@ -72,6 +73,7 @@ class TagihanController extends Controller
                 'status' => 0,
                 'spp_bulan' => $req->spp_bulan,
                 'jumlah_bayar' => $req->jumlah_bayar,
+                'keterangan' => $req->keterangan
              ]);
          }
          
