@@ -7,6 +7,7 @@ use Alert;
 use Session;
 use App\Siswa;
 use App\Pembayaran;
+use App\Tagihan;
 
 class SiswaLoginController extends Controller
 {
@@ -14,7 +15,7 @@ class SiswaLoginController extends Controller
    public function siswaLogin(){
       
        if(session('nama') != null) :  
-         return redirect('dashboard/siswa/histori');
+         return redirect('dashboard/siswa/tagihan');
        endif;
    
        return view('auth.siswa-login');
@@ -37,7 +38,7 @@ class SiswaLoginController extends Controller
                      Session::put('nama', $nama);
                      Session::put('nisn', $req->nisn);
                      
-                     return redirect('dashboard/siswa/histori');
+                     return redirect('dashboard/siswa/tagihan');
                else :
                
                       Alert::error('Gagal Login!', 'NISN dan nama siswa tidak sesuai');
@@ -70,4 +71,21 @@ class SiswaLoginController extends Controller
        
       return view('dashboard.siswa.index', $data);
     }
+
+    public function indexTagihan(){
+      
+        if(session('nama') == null) :  
+           return redirect('login/siswa');
+       endif;
+         
+
+        $data = [
+            'tagihan' => Tagihan::where([
+                ['status', '=', '0'],
+                ['id_siswa', '=', Session::get('id')]
+            ])->paginate(10)
+        ];
+         
+        return view('dashboard.siswa.indexTagihan', $data);
+      }
 }

@@ -159,6 +159,14 @@
 									<span class="hide-menu">Data SPP</span>
 							</a>
 						</li>
+                        @if(auth()->user()->level == 'admin')
+						<li class="sidebar-item">
+							<a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{ url('dashboard/tagihan') }}" aria-expanded="false">
+								<i class="mdi mdi-email-outline"></i>
+									<span class="hide-menu">Buat Tagihan</span>
+							</a>
+					     </li>
+				         @endif 
                               @endif
                               @if(auth()->user()->level == 'admin' || auth()->user()->level == 'petugas')
 						<li class="sidebar-item">
@@ -174,7 +182,7 @@
 									<span class="hide-menu">History Pembayaran</span>
 							</a>
 						</li>
-                              @if(auth()->user()->level == 'admin')
+                        @if(auth()->user()->level == 'admin')
 						<li class="sidebar-item">
 							<a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{ url('dashboard/laporan') }}" aria-expanded="false">
 								<i class="mdi mdi-file-document"></i>
